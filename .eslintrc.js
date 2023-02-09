@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-undef
 module.exports = {
   env: {
     browser: true,
@@ -10,6 +11,13 @@ module.exports = {
     ecmaVersion: "latest",
     sourceType: "module",
   },
-  plugins: ["react", "@typescript-eslint"],
+  plugins: ["react", "@typescript-eslint", "prettier"],
   rules: {},
+  settings: {
+    "import/resolver": {
+      node: {
+        extensions: [".js", ".jsx", ".ts", ".tsx"],
+      },
+    },
+  },
 };
